@@ -24,9 +24,11 @@ export default function App() {
         <Container>
           <Row>
             <Col>Tuesday</Col>
+
             <Col>Wednesday</Col>
             <Col>Thursday</Col>
             <Col>Friday</Col>
+            <Col>Saturday</Col>
           </Row>
         </Container>
       </main>
