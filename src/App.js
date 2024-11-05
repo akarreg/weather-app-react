@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -35,14 +34,9 @@ export default function App() {
       <footer>
         <p>
           This project was coded by Ama Akarregi and is open-sourced on{" "}
-          <a href="https://github.com/akarreg/weather-react" target="_blank">
-            {" "}
-            GitHub{" "}
-          </a>
+          <a href="https://github.com/akarreg/weather-react"> GitHub </a>
           and hosted on{" "}
-          <a href="https://github.com/akarreg/weather-react" target="_blank">
-            Netlify
-          </a>
+          <a href="https://github.com/akarreg/weather-react">Netlify</a>
         </p>
       </footer>
     </div>
