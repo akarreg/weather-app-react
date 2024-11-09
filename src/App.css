@@ -1,13 +1,11 @@
 body {
-  background-color: bisque;
+  background-color: rgb(177, 99, 3);
 }
 .Weather-App {
   background-color: aliceblue;
 }
-.Search {
-  text-align: center;
-  margin: 100px;
-}
-li {
-  text-decoration: none;
+footer {
+  margin-top: 30px;
+
+  padding: 20px;
 }
