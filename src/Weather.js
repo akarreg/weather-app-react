@@ -20,14 +20,6 @@ export default function Weather() {
           <li> Wind : </li>
           <li> Visibility: </li>
         </ul>
-
-        <div className="Row">
-          <div className="Col-6">Wednesday</div>
-          <div className="Col">Thursday</div>
-          <div className="Col">Friday</div>
-          <div className="Col">Saturday</div>
-          <div className="Col">Sunday</div>
-        </div>
       </main>
     </div>
   );

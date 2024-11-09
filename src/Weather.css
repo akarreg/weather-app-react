@@ -11,8 +11,6 @@ input {
 }
 button {
   background-color: aqua;
-
-  padding: %;
 }
 h1 {
   margin-left: 70px;
@@ -21,7 +19,6 @@ h1 {
 }
 h3 {
   margin-left: 30px;
-  color: green;
 }
 li {
   text-decoration: none;
