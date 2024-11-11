@@ -1,26 +1,26 @@
 form {
-  text-align: center;
-  margin-top: 100px;
-  padding-top: 50px;
+  padding-top: 30px;
+  padding-left: 30px;
 }
 
 input {
-  background-color: rgb(201, 191, 133);
-  margin: 20px;
-  padding-left: 60%;
+  padding: 10px 120px 10px 120px;
+  margin-left: 20px;
+  border-color: blue;
 }
 button {
-  background-color: aqua;
+  background-color: rgb(99, 99, 199);
+  padding: 10px 60px 10px 60px;
+  border-color: black;
 }
-h1 {
-  margin-left: 70px;
-
-  padding-top: 60px;
+.MainName {
+  margin-top: 40px;
+  margin-left: 40px;
 }
-h3 {
-  margin-left: 30px;
+.Temp {
+  margin-left: 40px;
 }
 li {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
 }

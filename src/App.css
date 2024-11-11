@@ -1,8 +1,13 @@
 body {
   background-color: rgb(177, 99, 3);
 }
-.Weather-App {
+
+.App {
   background-color: rgb(246, 240, 255);
+  border: 1px black solid;
+  border-radius: 20px;
+  margin: 40px;
+  font-family: Arial, sans-serif;
 }
 footer {
   margin-top: 30px;
