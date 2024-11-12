@@ -1,5 +1,8 @@
-body {
-  background-color: rgb(177, 99, 3);
+.Container {
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  background-color: blueviolet;
 }
 
 .App {

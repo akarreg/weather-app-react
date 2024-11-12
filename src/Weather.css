@@ -1,14 +1,14 @@
-form {
+.Weather form {
   padding-top: 30px;
   padding-left: 30px;
 }
 
-input {
+.Weather input {
   padding: 10px 120px 10px 120px;
   margin-left: 20px;
   border-color: blue;
 }
-button {
+.Weather button {
   background-color: rgb(99, 99, 199);
   padding: 10px 60px 10px 60px;
   border-color: black;
@@ -19,8 +19,13 @@ button {
 }
 .Temp {
   margin-left: 40px;
+  font-size: 25px;
+  font-weight: 16px;
+  line-height: 19px;
 }
-li {
-  text-decoration: none;
-  font-size: 15px;
+.Weather li {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 120px;
+  line-height: 29px;
 }
