@@ -26,7 +26,9 @@ export default function Weather() {
           </div>
           <div className="row ">
             <div className="col-6 d-flex justify-content-evenly ">
-              🌨️ {temperature}
+              🌨️
+              <span className="resultTemp">{Math.round(temperature)}</span>
+              <span className="Celsius">˚C</span>
             </div>
             <div className="col-6 d-flex justify-content-evenly">
               <ul>
