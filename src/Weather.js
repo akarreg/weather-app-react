@@ -37,20 +37,22 @@ export default function Weather() {
             </div>
           </div>
           <div className="row">
-            <div className="col-2">Tuesday</div>
-            <div className="col-2">Wednesday</div>
-            <div className="col-2">Thusday</div>
-            <div className="col-2">Friday</div>
-            <div className="col-2">Saturday</div>
+            <div className="col-2  d-flex justify-content-evenly">Tuesday</div>
+            <div className="col-2  d-flex justify-content-evenly">
+              Wednesday
+            </div>
+            <div className="col-2  d-flex justify-content-evenly">Thusday</div>
+            <div className="col-2  d-flex justify-content-evenly">Friday</div>
+            <div className="col-2  d-flex justify-content-evenly">Saturday</div>
           </div>
         </main>
       </div>
     );
   } else {
-    const apiKey = " bc0c992ff01fe3156bt9ead9dob31418";
+    const apiKey = "2bd326a60dc89a53287e446e819664df";
     let city = "london";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handResponse);
-    return "Loading ....";
+    return "Loading....";
   }
 }
