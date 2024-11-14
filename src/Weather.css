@@ -5,8 +5,8 @@
 
 .Weather input {
   padding: 10px 120px 10px 120px;
-  margin-left: 20px;
   border-color: blue;
+  margin-left: 0px;
 }
 .Weather button {
   background-color: rgb(99, 99, 199);

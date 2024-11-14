@@ -3,13 +3,18 @@ import "./Weather.css";
 import axios from "axios";
 
 export default function Weather() {
-  const [temperature, setTemperature] = useState(null);
-  const [ready, setReady] = useState(false);
+  const [weatherData, setweatherData] = useState({ ready: false });
+
   function handResponse(response) {
-    setTemperature(response.data.main.temp);
-    setReady(true);
+    setweatherData({
+      ready: true,
+      temperature: response.data.main.temp,
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+      city: response.data.name,
+    });
   }
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <header>
@@ -27,13 +32,15 @@ export default function Weather() {
           <div className="row ">
             <div className="col-6 d-flex justify-content-evenly ">
               🌨️
-              <span className="resultTemp">{Math.round(temperature)}</span>
+              <span className="resultTemp">
+                {Math.round(weatherData.temperature)}
+              </span>
               <span className="Celsius">˚C</span>
             </div>
             <div className="col-6 d-flex justify-content-evenly">
               <ul>
-                <li>Humidity: 100%</li>
-                <li> Wind : </li>
+                <li>Humidity: {weatherData.humidity}%</li>
+                <li> Wind : {weatherData.wind} km/h</li>
                 <li> Visibility: </li>
               </ul>
             </div>
@@ -52,7 +59,7 @@ export default function Weather() {
     );
   } else {
     const apiKey = "2bd326a60dc89a53287e446e819664df";
-    let city = "london";
+    let city = "doha";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handResponse);
     return "Loading....";
