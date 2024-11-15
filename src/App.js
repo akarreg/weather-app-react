@@ -4,8 +4,9 @@ import Weather from "./Weather";
 export default function App() {
   return (
     <div className="App">
-      <Weather />
-
+      <div className="Container">
+        <Weather defaultCity="Doha" />
+      </div>
       <footer>
         <p>
           This project was coded by Ama Akarregi and is open-sourced on{" "}

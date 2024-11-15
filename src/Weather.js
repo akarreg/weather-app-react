@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setweatherData] = useState({ ready: false });
 
   function handResponse(response) {
@@ -11,7 +11,9 @@ export default function Weather() {
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
+      visibility: response.data.main.visibility,
       city: response.data.name,
+      description: response.data.weather[0].description,
     });
   }
   if (weatherData.ready) {
@@ -27,7 +29,7 @@ export default function Weather() {
           <div className="MainName">
             <h1> City name</h1>
             <h3>Date </h3>
-            <h3>Description</h3>
+            <h3>{weatherData.description}</h3>
           </div>
           <div className="row ">
             <div className="col-6 d-flex justify-content-evenly ">
@@ -40,7 +42,7 @@ export default function Weather() {
             <div className="col-6 d-flex justify-content-evenly">
               <ul>
                 <li>Humidity: {weatherData.humidity}%</li>
-                <li> Wind : {weatherData.wind} km/h</li>
+                <li> Wind : {Math.round(weatherData.wind)} km/h</li>
                 <li> Visibility: </li>
               </ul>
             </div>
@@ -58,10 +60,11 @@ export default function Weather() {
       </div>
     );
   } else {
-    const apiKey = "2bd326a60dc89a53287e446e819664df";
-    let city = "doha";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const apiKey = "bc0c992ff01fe3156bt9ead9dob31418";
+
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultcity}&key=${apiKey}`;
     axios.get(apiUrl).then(handResponse);
-    return "Loading....";
   }
+
+  return "Loading....";
 }
